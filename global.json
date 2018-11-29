@@ -1,0 +1,18 @@
+{
+    "redisCache" : {
+        "server"     : "127.0.0.1:6379",
+        "accountsDB"    : 10,
+        "devicesDB"     : 11,
+        "dataSamplerDB" : 12  
+    },
+	"SendGrid" : {
+        "SENDGRID_API_KEY" : "",
+        "address" : "noreply@bilal"
+    },
+    "mysql" : {
+        "userpw" : "root:root@tcp(127.0.0.1:3306)/go"
+    },
+    "server" : {
+		"port" : "127.0.0.1:9000"
+	}
+}
