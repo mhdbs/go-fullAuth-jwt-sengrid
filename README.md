@@ -55,4 +55,18 @@ It should ask to set mysql password automatically just after installiing, if not
 
 sudo mysql_secure_installation  
 
-and answer the questions.  
+and answer the questions. 
+
+_____________________________________________________________________________________________
+
+#Initiating
+
+Run the redis server for caching.
+
+Go to the directory ~/go/src/go-fullAuth-jwt-sengrid 
+
+install the dependencies packages by $ dep ensure -v 
+
+run the code by $ go run main.go 
+
+build the package by $ go build main.go and then type $ ./main
