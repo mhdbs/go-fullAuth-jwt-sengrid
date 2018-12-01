@@ -69,7 +69,7 @@ func main() {
 }
 func initiateLogger() {
 	viper.SetConfigName("global")
-	viper.AddConfigPath("./")
+	viper.AddConfigPath("../go-fullAuth-jwt-sengrid")
 	f, _ := os.OpenFile("access.log", os.O_APPEND|os.O_CREATE|os.O_WRONLY, 0644)
 	configError := viper.ReadInConfig()
 	backend := logging.NewLogBackend(f, "", 0)
@@ -210,7 +210,7 @@ func forgetpassword(c *gin.Context) {
 		tokenString, _ := token.SignedString([]byte("secret"))
 
 		fmt.Println(tokenString)
-		from := mail.NewEmail("noreply@smartron.com", configSendGridAddress)
+		from := mail.NewEmail("noreply@bilal", configSendGridAddress)
 		subject := ("Click the link to authenticate user ")
 		to := mail.NewEmail("", email)
 		plainTextContent := "hello"
@@ -467,7 +467,7 @@ func usercreate(c *gin.Context) {
 	tokenString, _ := token.SignedString([]byte("secret"))
 
 	fmt.Println(tokenString)
-	from := mail.NewEmail("noreply@smartron.com", configSendGridAddress)
+	from := mail.NewEmail("noreply@bilal", configSendGridAddress)
 	subject := ("Click the link to authenticate user ")
 	to := mail.NewEmail("", email)
 	plainTextContent := "hello"
